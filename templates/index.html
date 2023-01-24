@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Mark!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section has-text-centered">
+    <figure class= "image container is-128x128 mb-4">
+      <img class="is-rounded" src="https://media.licdn.com/dms/image/C4E03AQGd0C_kOyXUOQ/profile-displayphoto-shrink_800_800/0/1627825446341?e=1680134400&v=beta&t=pNLVGJrRQbLqwgD6eAhhdNHSN3nZkRN-W4zv85e-Cj0"/>
+    </figure>
+    <p class = "title is-4">Ishan Maduwantha</p>
+    <p class = "subtitle is-6">@MarkTech</p>
+    <a class = "button is-primary is-outlined is-rounded m-1" href={{url_for('contact')}}>Contact</a>
+    <a class = "button is-link is-outlined is-rounded m-1"href='https://www.linkedin.com/in/ishan-maduwantha-021808218/'>LinkedIn</a>
+    <a class = "button is-black is-outlined is-rounded m-1" href='https://www.tiktok.com/@imarktech'>TikTok</a>
+    
+    </section>
+    <section class ="columns ">
+        <div class = "column is-three-fifths is-offset-one-fifth has-background-light">
+          <div class="columns is-gapless">
+            <div class = "column is=half">
+              <div class ="card m-3">
+                <div class="card-content">
+                  <h1 class="title">About</h1>
+                  <p> {{profile.about}} </p>
+                </div>
+              </div>
+              <div class ="card m-3 has-background-link-light">
+                <div class="card-content">
+                  <h1 class="title">Interests</h1>
+                  {{profile.interest|safe}}
+                </div>
+              </div>
+            </div>
+            <div class = "column is=half">
+              <div class ="card m-3 has-background-primary-light">
+                <div class="card-content">
+                  <h1 class="title">Experience</h1>
+                  {{profile.experience|safe}}
+                </div>
+              </div>
+              <div class ="card m-3 has-background-warning-light">
+                <div class="card-content">
+                  <h1 class="title">Education</h1>
+                  {{profile.education|safe}}
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </section>
+  </body>
+</html>

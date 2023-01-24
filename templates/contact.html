@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+    <div class="field">
+        <a href={{url_for('home')}} class="delete is-large is-pulled-right"></a>
+    </div>
+    <h1 class=" has-text-centered title is-2">Contact me</h1>
+    <section class= "section">
+        <form class= "columns" action="/" method="POST">
+            <div class ="column has-text-left is-three-fifths is-offset-one-fifth">
+                
+                <div class="field">
+                    <lable class = "lable">Name</label>
+                    <div class= "control">
+                        <input class = "input" type="text" name="name"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable class = "lable">Email</label>
+                    <div class= "control">
+                        <input class = "input" type="text" name="email"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <lable class = "lable">Message</label>
+                    <div class= "control">
+                        <textarea name="message"class="textarea"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <button class = "button is-link is-fullwidth has-text-weight-medium is-medium" type ="submit">Send Message</label>
+                </div>
+                
+            </div>
+        </form>
+    </section>
+
+  
+  </body>
+</html>
